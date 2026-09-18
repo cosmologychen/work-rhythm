@@ -1,141 +1,110 @@
-# 工作节奏 (Work Rhythm) - 防止工作上头的手表健康助手
+# Work Rhythm (工作节奏)
 
-一款专为 **Amazfit Balance (Zepp OS)** 打造的腕上工作节奏管理小程序。
+> A mindful rhythm & anti-burnout assistant for **Zepp OS** smartwatches.  
+> 一款专为 **Zepp OS** 手表打造的防上头与工作节律健康助手。
 
----
-
-## 📖 设计哲学：为什么做这个程序？
-
-在长时间的科研、编程或深度脑力工作中，人们经常会陷入一种**“工作上头”**的状态：
-- **思维陷入死胡同**：卡在某一个 Bug 或公式细节里几个小时，精神高度紧绷却毫无实质进展；
-- **缺乏阶段复盘**：忙碌了一整天，下班时却想不起自己到底做了什么、沉淀了什么认知；
-- **健康严重损耗**：连续数小时久坐不起、忘记喝水活动，导致颈椎疲劳、眼睛酸痛与身体透支。
-
-**「工作节奏」正是为了打破这种病态的“上头”循环而生。**  
-它不是一个简单的番茄钟，而是将**思考沉淀（写日志）**与**物理阻断（活动身体）**深度融合到工作流中的腕上教练：
-1. **工作阶段 (Work)**：心无旁骛专注于当前任务；
-2. **写日志阶段 (Log)**：强行打断沉浸，强震提醒停下手头操作，在日志/笔记软件中记录“过去半小时做了什么、遇到了什么卡点、下一步思路”；
-3. **活动阶段 (Break)**：离开工位，走动、喝水、远眺，让大脑神经元后台重组，从物理上解除疲劳；
-4. **防误碰物理长按**：每一次阶段切换都需要在手表上长按对应秒数（支持动态弧形进度），防止手指习惯性随手划掉提醒。
+[![Zepp OS](https://img.shields.io/badge/Zepp%20OS-3.0%2B%20%7C%204.0-blue.svg)](https://docs.zepp.com/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/Device-Amazfit%20Balance%20%7C%20T--Rex%203-orange.svg)](#-supported-devices--支持设备)
 
 ---
 
-## ✨ 核心特性
+## 📖 Why Work Rhythm? / 设计初衷
 
-- **三阶段智能节律循环**：
-  - `工作` ➔ `写日志` ➔ `活动` ➔ `下一轮工作`，周而复始。
-- **防止上头专属·长按确认阻断**：
-  - 提醒触发时提供闹钟级持续高强度震动（`VIBRATOR_SCENE_TIMER`）与 3 分钟常亮屏；
-  - 必须在手表上**持续长按指定秒数**方可确认阶段完成，强迫大脑切换注意力。
-- **暂停不计工作时长**：
-  - 中途开会、接电话、用餐点击【暂停】后，总工作时长绝对停止，秒数不走字；
-  - 倒计时精确快照，继续工作后无缝续接，绝不重新重置倒数时间。
-- **暂停 1.5 小时防遗忘唤醒**：
-  - 若暂停超过 90 分钟，底层系统闹钟将准时强震唤醒手表，询问是否直接下班；
-  - 3 分钟未操作自动帮您安全结算下班，防止手表空耗电或无限挂起。
-- **原生表冠交互体验**：
-  - 首页支持直接按下数字表冠快速上班；
-  - 设置页面支持转动表冠顺滑切换高亮项，按下表冠直接进入调节；
-  - 调节页原生滚轮阻尼选择，按下表冠或勾选快速确认生效。
+In deep work, programming, research, or writing, it is easy to fall into a **"tunnel vision trap" (上头)**:
+- **Getting stuck**: Spending hours grinding on a single bug or equation with mounting mental fatigue and diminishing returns.
+- **Lacking reflection**: Finishing a long day without knowing what key insights were actually achieved.
+- **Physical burnout**: Hours of continuous sitting without water or movement.
+
+**Work Rhythm** breaks this loop by introducing physical interrupts and forced cognitive resets right on your wrist:
+1. **Focus (工作)**: Pure concentration on the current task.
+2. **Log (写日志)**: A strong, alarm-level vibration forces you to pause and jot down thoughts/progress in your notebook or journal.
+3. **Break (活动)**: Physical away-from-desk time to stretch, hydrate, and let your subconscious reorganize thoughts.
+4. **Long-Press Confirmation (物理长按阻断)**: Every phase switch requires holding down on the watch face for several seconds. You cannot carelessly dismiss the prompt.
 
 ---
 
-## ⚙️ 可配置参数
+## 📸 Screenshots / 界面预览
 
-进入手表「设置」页面即可自定义各项参数，即调即用：
+| Home (首页) | Focus & Pause (专注与暂停) | Break Prompt (防上头长按) | Crown Settings (表冠设置) |
+| :---: | :---: | :---: | :---: |
+| <img src="assets/preview_en/en_preview_1_home.png" width="180"/> | <img src="assets/preview_en/en_preview_2_working.png" width="180"/> | <img src="assets/preview_en/en_preview_3_remind.png" width="180"/> | <img src="assets/preview_en/en_preview_4_settings.png" width="180"/> |
 
-| 参数项 | 说明 | 默认值 | 推荐取值范围 |
+---
+
+## ✨ Features / 核心功能
+
+- 🔄 **3-Phase Rhythm Loop**: `Focus` ➔ `Log Progress` ➔ `Physical Break` ➔ `Next Focus`.
+- 🛑 **Anti-Burnout Long-Press Unlock**: Alarm-level continuous vibration (`VIBRATOR_SCENE_TIMER`) with 3-minute screen-keep-on. Requires holding the screen for configured seconds (5s ~ 15s) to confirm phase completion.
+- ⏸️ **Smart Pause & Session Tracking**: Pausing completely halts active work time calculation. Session countdown snapshot accurately resumes where you left off.
+- ⏰ **1.5-Hour Pause Auto-Finish Prompt**: If paused for over 90 minutes, a dedicated reminder wakes up the watch to ask if you want to clock out, saving valid hours without draining battery.
+- 👑 **Digital Crown Navigation**: Full hardware integration with the rotating crown for smooth menu selection and press-to-enter actions.
+- 🌐 **Full Bilingual Support**: Built-in support for both English (`en-US`) and Simplified Chinese (`zh-CN`), matching the watch system language automatically.
+
+---
+
+## ⌚ Supported Devices / 支持设备
+
+Native 480 × 480 circular round-screen Zepp OS devices:
+
+- **Amazfit Balance** / Balance 2 / Balance 3 / Balance Ultra
+- **Amazfit T-Rex 3** / T-Rex 3 Pro (48mm) / T-Rex Ultra 2
+- **Amazfit Cheetah Pro** / Cheetah 2 Ultra
+- **Amazfit Active Max**
+
+---
+
+## ⚙️ Configurable Parameters / 可调节参数
+
+All intervals can be adjusted in the watch Settings page:
+
+| Parameter (参数) | Description | Default | Range |
 | :--- | :--- | :---: | :---: |
-| **循环(分)** | 单次专注工作时长 | 30 分钟 | 25 ~ 60 分钟 |
-| **写日志(分)** | 停下记录阶段思考的时长 | 2 分钟 | 2 ~ 5 分钟 |
-| **活动(分)** | 离开工位起身活动时长 | 5 分钟 | 3 ~ 10 分钟 |
-| **长按1(秒)** | 工作结束提醒时的确认长按秒数 | 10 秒 | 5 ~ 15 秒 |
-| **长按2(秒)** | 日志写完提醒时的确认长按秒数 | 5 秒 | 3 ~ 10 秒 |
-| **长按3(秒)** | 活动结束提醒时的确认长按秒数 | 10 秒 | 5 ~ 15 秒 |
+| **Cycle (循环)** | Focus work duration / 专注时长 | 30 min | 1 ~ 120 min |
+| **Log (写日志)** | Forced reflection duration / 记录时长 | 2 min | 1 ~ 10 min |
+| **Break (活动)** | Away-from-desk break / 活动时长 | 5 min | 1 ~ 15 min |
+| **Hold 1 (长按1)** | Hold time to confirm work phase end | 10 s | 3 ~ 30 s |
+| **Hold 2 (长按2)** | Hold time to confirm log phase end | 5 s | 3 ~ 30 s |
+| **Hold 3 (长按3)** | Hold time to confirm break phase end | 10 s | 3 ~ 30 s |
 
 ---
 
-## 🛠️ 项目结构
+## 🛠️ Development & Build / 本地开发
 
-```text
-apps/work-rhythm/
-├── app.js                    # 小程序生命周期与状态挂载
-├── app.json                  # 应用配置（AppId、设备靶标、权限声明）
-├── assets/balance/           # 设备资源（高清 248x248 图标等）
-├── page/
-│   ├── index/                # 首页（主视图未上班 / 视图二上班中）
-│   ├── settings/             # 设置列表页（自绘 6 项高亮表冠列表）
-│   ├── detail/               # 参数调节详情页（原生滚轮与表冠确认）
-│   └── remind/               # 阶段完成长按提醒页 & 1.5 小时暂停提醒页
-└── utils/
-    └── state.js              # 核心状态机、本地持久化与系统闹钟管理
-```
-
----
-
-## 🚀 本地开发与构建
-
-### 1. 环境准备
+### Prerequisites
 - Node.js >= 16
-- 全局安装 Zeus 命令行工具：
+- [Zeus CLI](https://docs.zepp.com/docs/guides/tools/cli/):
   ```bash
   npm i @zeppos/zeus-cli -g
   ```
 
-### 2. 调试与模拟器运行
-在当前应用目录下启动实时监听调试：
+### Run in Simulator
 ```bash
-cd apps/work-rhythm
 zeus dev
 ```
-此时可在 **Zepp OS Simulator v2** 中观察页面渲染与实时日志。
+Open **Zepp OS Simulator v2** to test features and interaction.
 
-### 3. 真机扫码预览
+### Real-Device Preview
 ```bash
 zeus preview
 ```
-在手机打开 **Zepp App** ➔ 「我的」➔ 「设置」➔ 「开发者模式」➔ 使用「扫一扫」扫描终端输出的二维码即可安装至手表实测。
+Scan the QR code with **Zepp App** ➔ Profile ➔ Settings ➔ Developer Mode ➔ Scan.
 
-### 4. 正式打包构建
+### Production Build
 ```bash
 zeus build
 ```
-编译产物将输出在 `dist/` 目录下，文件命名格式为 `<appId>-Work_Rhythm-<version>-<timestamp>.zab`（例如 `dist/1127723-Work_Rhythm-1.0.0-20260918214133.zab`）。
+The output `.zab` package will be generated under the `dist/` directory.
 
 ---
 
-## 📦 发布到 Zepp 官方小程序商店指南
+## 💬 Feedback & Support / 支持与反馈
 
-想要将「工作节奏」发布到 Zepp 官方应用商店供所有 Amazfit Balance 用户下载，请按以下流程操作：
+If you encounter any bugs, have feature requests, or want to contribute:
+- Please open an issue at: [GitHub Issues](https://github.com/cosmologychen/work-rhythm/issues)
 
-### 第一步：开发者平台登记
-1. 访问 [Zepp 开放平台](https://developer.zepp.com/)；
-2. 进入「管理中心」➔「应用管理」➔ 点击**「创建应用」**；
-3. 填入应用名称并完成登记，获得专属 **`appId`**（当前已设置为 `1127723`）；
-4. 本项目 `app.json` 已配置该 appId，构建产物也是与该 ID 绑定的正式 `.zab` 包。
+---
 
-### 第二步：准备商店上架素材（已全部就绪）
-上架所需的所有资源已在项目中全部自动生成：
-1. **应用安装包**：
-   - 位于 `dist/1127723-Work_Rhythm-1.0.0-*.zab`。
-2. **应用商店 Icon**：
-   - 位于 `assets/store_icon_240.png`（严格符合官方 240×240 px 规范）。
-3. **应用宣传截图**（5 张官方 360×360 px 规范图已在 `assets/preview/` 生成）：
-   - `assets/preview/preview_1_home.png`：首页·一键上班
-   - `assets/preview/preview_2_working.png`：工作计时与暂停
-   - `assets/preview/preview_3_remind.png`：防上头·长按确认阻断
-   - `assets/preview/preview_4_settings.png`：表冠高亮设置列表
-   - `assets/preview/preview_5_picker.png`：原生滚轮参数微调
-4. **应用文本材料**：
-   - **应用分类**：健康生活 / 效率工具；
-   - **服务类别**：普通（无需特殊行业资质）；
-   - **一句话简介**：防止工作上头，专注、复盘与活动的健康节律提醒助手；
-   - **详细介绍**：可参考本 README 的“设计哲学”部分；
-   - **隐私协议文本**：说明本应用所有数据（工作设置与时间统计）均保存在手表本地 `localStorage`，不收集、不上传任何个人隐私与设备数据。
+## 📄 License
 
-### 第三步：提交审核与上架
-1. 在管理中心找到该应用，点击**「提交审核」**；
-2. 上传 `.zab` 包并填写上述截图与文案；
-3. 勾选权限（本应用仅使用本地存储与本地闹钟唤醒，无敏感健康/定位权限）；
-4. 点击提交，官方审核周期通常为 **1 ~ 5 个工作日**；
-5. 审核通过后，应用将正式上架至全球 Zepp App 的手表应用商城！
+This project is licensed under the [MIT License](LICENSE).

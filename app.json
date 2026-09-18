@@ -9,7 +9,7 @@
       "name": "1.0.0"
     },
     "icon": "icon.png",
-    "vender": "ChenBinghang",
+    "vender": "cosmologychen",
     "description": "Work rhythm reminder: periodic vibration prompts for logging and breaks"
   },
   "permissions": [
@@ -36,18 +36,32 @@
         }
       },
       "platforms": [
-        {
-          "name": "balance-cn",
-          "deviceSource": 8519936
-        },
-        {
-          "name": "balance",
-          "deviceSource": 8519937
-        },
-        {
-          "name": "balance2",
-          "deviceSource": 8519939
-        }
+        { "name": "balance-cn", "deviceSource": 8519936 },
+        { "name": "balance", "deviceSource": 8519937 },
+        { "name": "balance2", "deviceSource": 8519939 },
+        { "name": "balance-2-cn", "deviceSource": 9568512 },
+        { "name": "balance-2", "deviceSource": 9568513 },
+        { "name": "balance-2-us", "deviceSource": 9568515 },
+        { "name": "balance-3-cn", "deviceSource": 11141376 },
+        { "name": "balance-3", "deviceSource": 11141377 },
+        { "name": "balance-3-us", "deviceSource": 11141379 },
+        { "name": "balance-ultra-cn", "deviceSource": 11075840 },
+        { "name": "balance-ultra", "deviceSource": 11075841 },
+        { "name": "trex-3-cn", "deviceSource": 8716544 },
+        { "name": "trex-3", "deviceSource": 8716545 },
+        { "name": "trex-3-other", "deviceSource": 8716547 },
+        { "name": "trex-3-pro-cn", "deviceSource": 10551552 },
+        { "name": "trex-3-pro", "deviceSource": 10551553 },
+        { "name": "trex-3-pro-other", "deviceSource": 10551555 },
+        { "name": "trex-ultra-2-cn", "deviceSource": 10879232 },
+        { "name": "trex-ultra-2", "deviceSource": 10879233 },
+        { "name": "trex-ultra-2-other", "deviceSource": 10879235 },
+        { "name": "cheetah-pro-cn", "deviceSource": 8126720 },
+        { "name": "cheetah-pro", "deviceSource": 8126721 },
+        { "name": "cheetah-2-ultra-cn", "deviceSource": 9961728 },
+        { "name": "cheetah-2-ultra", "deviceSource": 9961729 },
+        { "name": "active-max", "deviceSource": 10813697 },
+        { "name": "active-max-other", "deviceSource": 10813699 }
       ],
       "designWidth": 480
     }
