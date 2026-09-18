@@ -1,0 +1,10 @@
+{
+  "name": "work-rhythm",
+  "version": "1.0.0",
+  "description": "Work rhythm reminder for Amazfit Balance: periodic vibration prompts for logging and breaks",
+  "author": "ChenBinghang",
+  "license": "MIT",
+  "devDependencies": {
+    "@zeppos/device-types": "^3.0.1"
+  }
+}

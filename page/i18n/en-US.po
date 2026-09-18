@@ -1,0 +1,89 @@
+msgid "app_name"
+msgstr "Work Rhythm"
+
+msgid "phase_work"
+msgstr "Working"
+
+msgid "phase_log"
+msgstr "Log"
+
+msgid "phase_break"
+msgstr "Break"
+
+msgid "phase_paused_suffix"
+msgstr " (Paused)"
+
+msgid "btn_start"
+msgstr "Start"
+
+msgid "btn_stop"
+msgstr "Finish"
+
+msgid "btn_pause"
+msgstr "Pause"
+
+msgid "btn_resume"
+msgstr "Resume"
+
+msgid "btn_settings"
+msgstr "Settings"
+
+msgid "label_session"
+msgstr "Session"
+
+msgid "label_today"
+msgstr "Today"
+
+msgid "confirm_stop_title"
+msgstr "Worked %s, finish now?"
+
+msgid "time_h"
+msgstr "h "
+
+msgid "time_m"
+msgstr "m"
+
+msgid "setting_title"
+msgstr "Settings"
+
+msgid "setting_cycle"
+msgstr "Cycle (m)"
+
+msgid "setting_log"
+msgstr "Log (m)"
+
+msgid "setting_break"
+msgstr "Break (m)"
+
+msgid "setting_hold1"
+msgstr "Hold 1 (s)"
+
+msgid "setting_hold2"
+msgstr "Hold 2 (s)"
+
+msgid "setting_hold3"
+msgstr "Hold 3 (s)"
+
+msgid "remind_prompt_work"
+msgstr "Time to write your log"
+
+msgid "remind_prompt_log"
+msgstr "Time to take a break"
+
+msgid "remind_prompt_break"
+msgstr "Time to get back to work"
+
+msgid "hold_btn_text"
+msgstr "Hold %d s"
+
+msgid "progress_text"
+msgstr "%s / %d s"
+
+msgid "pause_timeout_title"
+msgstr "Paused over 1.5h"
+
+msgid "pause_timeout_sub"
+msgstr "Finish work now?"
+
+msgid "btn_continue_work"
+msgstr "Resume"

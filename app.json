@@ -1,0 +1,64 @@
+{
+  "configVersion": "v3",
+  "app": {
+    "appId": 1127723,
+    "appName": "Work Rhythm",
+    "appType": "app",
+    "version": {
+      "code": 1,
+      "name": "1.0.0"
+    },
+    "icon": "icon.png",
+    "vender": "ChenBinghang",
+    "description": "Work rhythm reminder: periodic vibration prompts for logging and breaks"
+  },
+  "permissions": [
+    "device:os.alarm",
+    "device:os.local_storage"
+  ],
+  "runtime": {
+    "apiVersion": {
+      "compatible": "3.0.0",
+      "target": "3.7",
+      "minVersion": "3.0.0"
+    }
+  },
+  "targets": {
+    "balance": {
+      "module": {
+        "page": {
+          "pages": [
+            "page/index/index",
+            "page/settings/index",
+            "page/detail/index",
+            "page/remind/index"
+          ]
+        }
+      },
+      "platforms": [
+        {
+          "name": "balance-cn",
+          "deviceSource": 8519936
+        },
+        {
+          "name": "balance",
+          "deviceSource": 8519937
+        },
+        {
+          "name": "balance2",
+          "deviceSource": 8519939
+        }
+      ],
+      "designWidth": 480
+    }
+  },
+  "i18n": {
+    "zh-CN": {
+      "appName": "工作节奏"
+    },
+    "en-US": {
+      "appName": "Work Rhythm"
+    }
+  },
+  "defaultLanguage": "zh-CN"
+}

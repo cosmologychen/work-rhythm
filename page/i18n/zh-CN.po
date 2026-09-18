@@ -1,0 +1,89 @@
+msgid "app_name"
+msgstr "工作节奏"
+
+msgid "phase_work"
+msgstr "工作中"
+
+msgid "phase_log"
+msgstr "写日志"
+
+msgid "phase_break"
+msgstr "活动"
+
+msgid "phase_paused_suffix"
+msgstr " (已暂停)"
+
+msgid "btn_start"
+msgstr "上班"
+
+msgid "btn_stop"
+msgstr "下班"
+
+msgid "btn_pause"
+msgstr "暂停"
+
+msgid "btn_resume"
+msgstr "继续"
+
+msgid "btn_settings"
+msgstr "设置"
+
+msgid "label_session"
+msgstr "本次"
+
+msgid "label_today"
+msgstr "今日累计"
+
+msgid "confirm_stop_title"
+msgstr "本次上班 %s，确认下班？"
+
+msgid "time_h"
+msgstr "小时"
+
+msgid "time_m"
+msgstr "分"
+
+msgid "setting_title"
+msgstr "设置"
+
+msgid "setting_cycle"
+msgstr "循环(分)"
+
+msgid "setting_log"
+msgstr "写日志(分)"
+
+msgid "setting_break"
+msgstr "活动(分)"
+
+msgid "setting_hold1"
+msgstr "长按1(秒)"
+
+msgid "setting_hold2"
+msgstr "长按2(秒)"
+
+msgid "setting_hold3"
+msgstr "长按3(秒)"
+
+msgid "remind_prompt_work"
+msgstr "该停下来写日志了"
+
+msgid "remind_prompt_log"
+msgstr "起来活动一下"
+
+msgid "remind_prompt_break"
+msgstr "回来继续工作"
+
+msgid "hold_btn_text"
+msgstr "长按 %d 秒"
+
+msgid "progress_text"
+msgstr "%s / %d 秒"
+
+msgid "pause_timeout_title"
+msgstr "已暂停 1.5 小时"
+
+msgid "pause_timeout_sub"
+msgstr "是否结束本次工作？"
+
+msgid "btn_continue_work"
+msgstr "继续工作"
